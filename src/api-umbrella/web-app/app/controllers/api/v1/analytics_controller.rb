@@ -36,6 +36,7 @@ class Api::V1::AnalyticsController < Api::V1::BaseController
         ]
 
         path = params[:prefix].split("/", 2)[1]
+        binding.pry
         parents = path.split("/")
         parents.each_with_index do |parent, index|
           @breadcrumbs << {
